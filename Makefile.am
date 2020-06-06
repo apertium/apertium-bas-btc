@@ -2,7 +2,6 @@
 ## Makefile for Basaa--btc
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=bas
 LANG2=btc
 PREFIX1=$(LANG1)-$(LANG2)
@@ -178,9 +177,7 @@ apertium_bas_btc_DATA=	\
 	$(BASENAME).$(PREFIX2).t3x
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
-noinst_DATA=modes/$(PREFIX1).mode \
-	.deps/$(LANG1).automorf.bin \
-	.deps/$(LANG2).automorf.bin
+noinst_DATA=modes/$(PREFIX1).mode
 
 install-data-local: install-modes
 
@@ -204,4 +201,3 @@ test: all
 	@echo "house" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
-
