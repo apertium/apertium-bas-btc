@@ -1,0 +1,10 @@
+{
+    "bas-btc": {
+        "input": "bas-btc-input.txt",
+        "mode": "bas-btc"
+    },
+    "btc-bas": {
+        "input": "btc-bas-input.txt",
+        "mode": "btc-bas"
+    }
+}
